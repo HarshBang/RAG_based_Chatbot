@@ -1,25 +1,26 @@
-# Core
+# Web app
 streamlit
 python-dotenv
 requests
 
-# LangChain & Vector DB
-langchain
-langchain-core
-langchain-community
-chromadb
-sentence-transformers
+# LangChain ecosystem (fixed imports + compatibility)
+langchain==0.2.14
+langchain-core==0.2.34
+langchain-community==0.2.11
+langchain-text-splitters==0.2.2
 
-# LLM & Embeddings
+# Vector store + embeddings
+chromadb==0.5.3
+sentence-transformers
 openai
 huggingface_hub
 
-# PDF / OCR
+# PDF + OCR
 pypdf
 pdf2image==1.17.0
 pytesseract
 Pillow
 
-# Machine Learning
+# ML
 numpy
 scikit-learn
