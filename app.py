@@ -25,13 +25,20 @@ from dotenv import load_dotenv
 
 # ================= CONFIG ==================
 load_dotenv()
+
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+HF_TOKEN = os.getenv("HF_TOKEN")
 
 OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
 SENTENCE_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 CHROMA_PERSIST_DIR = "./chroma_db"
 PCA_DIM = 128
-login("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")
+
+# Login to Hugging Face (securely)
+if HF_TOKEN:
+    login(token=HF_TOKEN)
+else:
+    print("⚠️ Warning: Hugging Face token not found. Please set HF_TOKEN in .env or Streamlit secrets.")
 # ============================================
 
 st.set_page_config(page_title="CIC Chatbot", layout="wide")
