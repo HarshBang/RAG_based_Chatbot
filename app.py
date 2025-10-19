@@ -9,7 +9,7 @@ from pypdf import PdfReader
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from sklearn.decomposition import PCA
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
