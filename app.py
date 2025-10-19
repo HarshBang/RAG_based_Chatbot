@@ -21,9 +21,12 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from chromadb import PersistentClient
 from huggingface_hub import login
 
+from dotenv import load_dotenv
 
 # ================= CONFIG ==================
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "sk-or-your-key")
+load_dotenv()
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
 OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
 SENTENCE_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 CHROMA_PERSIST_DIR = "./chroma_db"
