@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-community
+langchain-huggingface
+chromadb
+pypdf
+pdf2image
+pytesseract
+Pillow
+sentence-transformers
+scikit-learn
+openai
+huggingface_hub
