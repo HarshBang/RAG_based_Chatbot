@@ -1,13 +1,25 @@
+# Core App
 streamlit
+python-dotenv
+
+# LangChain + Vector Database
 langchain
 langchain-community
-langchain-huggingface
+langchain-core
 chromadb
-pypdf
+sentence-transformers
+
+# LLMs and API
+openai
+huggingface_hub
+requests
+
+# PDF Handling (Text + Image-based)
+PyPDF2
 pdf2image
 pytesseract
 Pillow
-sentence-transformers
+numpy
+
+# ML Utils (PCA, etc.)
 scikit-learn
-openai
-huggingface_hub
