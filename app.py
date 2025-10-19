@@ -1,4 +1,3 @@
-# app.py
 import os
 import uuid
 import streamlit as st
@@ -9,15 +8,19 @@ from pypdf import PdfReader
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from sklearn.decomposition import PCA
+
+# Correct imports for new LangChain versions
 from langchain_core.documents import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
+
 from chromadb import PersistentClient
 from huggingface_hub import login
+
 
 # ================= CONFIG ==================
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "sk-or-your-key")
